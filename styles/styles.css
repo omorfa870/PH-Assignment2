@@ -31,6 +31,11 @@
 }
 
 
+.my-icon{
+  font-size: 60px !important;            
+}
+
+
 
 /* Navbar */
 .nav {
@@ -246,4 +251,74 @@
 .ic p{
     color: #FFFFFF;
     padding-top: 1em;
+}
+
+/* choose section */
+
+.choose-section{
+    background-color: #230E3D;
+}
+
+.choose-header{
+    padding-top: 7.5rem;
+    color: #FFFFFF;
+    font-size: 3em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.grid-container{
+    margin-top: 2.44rem;
+    display: grid;
+    gap: 1.875rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding-bottom: 7.5rem;
+}
+
+.box{
+    background-color: #351165;
+    border-radius: 2.5rem;
+}
+
+#audio{
+    padding: 6.67rem 2.5rem;
+    grid-row: span 2;
+}
+
+#mobile{
+    grid-column: span 2;
+    padding: 2.5rem 2.5rem;
+}
+
+#global{
+    grid-column: span 2;
+    padding: 2.5rem 2.5rem;
+}
+
+#interview{
+    grid-column: span 2;
+    padding: 2.5rem 2.5rem;
+}
+
+#rich{
+    padding: 2.5rem 2.5rem;
+
+}
+
+.gh{
+   color: #FFFFFF;
+   font-size: 1.5rem;
+   font-weight: bold;
+   padding-top: 1rem;
+}
+
+.gp{
+   color: #FFFFFF;
+   font-size: 1rem;
+   padding-top: 1rem;
+
 }

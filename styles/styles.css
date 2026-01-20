@@ -5,6 +5,11 @@
     font-family: sans-serif;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 /* shared css */
 
 .color-rgb-text {
@@ -26,8 +31,9 @@
 }
 
 .margin {
-    margin-left: 12.5rem;
-    margin-right: 12.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 
@@ -80,25 +86,39 @@
     cursor: pointer;
 }
 
+.hamburger {
+    display: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
 /* banner-section */
 
 .banner-section {
     width: 100%;
-    min-height: 47.5vh;
+    padding: 4rem 0;
     background-image: url(../assets/hero-bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
 }
 
+
 .design {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
+
 
 .b-name {
     margin-top: 2.5rem;
@@ -125,32 +145,56 @@
 
 
 .circle {
-    width: 21.875vw;
-    height: 21.875vw;
+    width: 70vw;
+    height: 70vw;
 
     max-width: 350px;
     max-height: 350px;
-    /* border:2px solid white; */
+
     border-radius: 50%;
     margin: 6.313rem auto 0;
-    /* background-color: #1A0B2E; */
-    background: url(../assets/hero-circle.png);
-    display: flex;
-    padding: 0 auto;
 
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    cursor: pointer;
+    background: url(../assets/hero-circle.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
 }
+
+.circle img {
+    width: 45%;
+    height: auto;
+    max-width: 160px;
+}
+
+
 
 .circle:hover img {
 
     animation: float 0.7s ease-in-out infinite;
 }
+
+.badge-new {
+    position: absolute;
+    top: 15%;
+    right: 12%;
+    transform: translate(35%, -35%);
+    padding: 0.3rem 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    background: #00FF88;
+    border-radius: 999px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25), 0 0 18px rgba(0, 255, 136, 0.35);
+
+}
+
+
 
 @keyframes float {
 
@@ -346,6 +390,7 @@
     margin-top: 2.5rem;
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
 
 }
 
@@ -359,7 +404,7 @@
     transition: transform 0.2s ease;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.03);
     cursor: pointer;
 }
@@ -395,9 +440,10 @@
 }
 
 /* meet section */
-.mbo{
+.mbo {
     padding-bottom: 7.5rem;
 }
+
 .meet-section {
     background-color: #1A0B2E;
 }
@@ -408,10 +454,10 @@
     border-radius: 2rem;
     margin-top: 2.5rem;
     display: flex;
-    
+
 }
 
-.meet-main img {
+.mmi {
     padding: 2.5rem 1.5rem 2.5rem 2.5rem;
 }
 
@@ -419,34 +465,31 @@
     margin: 3rem 2.5rem 3rem 0;
 }
 
-.so-ic{
-  display: flex;
-  gap: 18px;
-  margin-top: 18px;
+.so-ic {
+    display: flex;
+    gap: 18px;
+    margin-top: 18px;
 }
 
-.social{
-  width: 64px;
-  height: 64px;
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
+.social {
+    width: 64px;
+    height: 64px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
 }
 
-.social img{
-  width: 28px !important;
-  height: 28px !important;
-  object-fit: contain;
-  display: block;
+.social img {
+    width: 28px !important;
+    height: 28px !important;
+    object-fit: contain;
+    display: block;
 }
 
-.meet-main > img{
-  padding: 2.5rem 1.5rem 2.5rem 2.5rem;
-}
 
-.meet-main .so-ic img{
-  padding: 0;
+.meet-main .so-ic img {
+    padding: 0;
 }
 
 
@@ -463,14 +506,14 @@
     justify-content: center;
 }
 
-.footer-header{
+.footer-header {
     color: #FFFFFF;
     font-size: 3.75rem;
     font-weight: bolder;
     padding-bottom: 2rem;
 }
 
-.footer-container{
+.footer-container {
     padding: 7.5rem;
     display: flex;
     flex-direction: column;
@@ -478,25 +521,27 @@
     align-items: center;
 }
 
-.medias{
-    /* padding-top: 2rem; */
+.medias {
     display: flex;
-    width: 34rem;
-    /* border: 2px solid red; */
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    max-width: 34rem;
+    justify-content: center;
     align-items: center;
 }
 
-.med{
+
+.med {
     display: flex;
     gap: 5px;
 }
 
-.med p{
+.med p {
     color: #FFFFFF;
 }
 
-.copyright{
+.copyright {
     padding-top: 2rem;
     color: #FFFFFF;
     font-size: 1rem;
@@ -505,7 +550,212 @@
     align-items: center;
 }
 
-.ic h1 i{
+.ic h1 i {
     font-size: 2rem;
-    
+
+}
+
+
+/* Responsibe */
+
+@media screen and (max-width:576px) {
+
+    .AEH,
+    .nav-subscribe {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav {
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    /* .badge-new{
+    top: 2.2em;
+    right: 1em;
+    padding: 0.3rem 0.75rem;
+    } */
+
+    /* .banner-btn{
+        display: flex;
+    } */
+
+    .margin {
+        padding: 0 1rem;
+    }
+
+    .banner-btn {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .banner-btn button {
+        width: 90%;
+        max-width: 320px;
+        justify-content: center;
+    }
+
+    .b-name h1 {
+        font-size: 2.4rem;
+        text-align: center;
+
+    }
+
+    .b-name p {
+        text-align: center;
+        padding: 0 1rem;
+        font-size: 0.95rem;
+        padding-top: 0.5rem;
+    }
+
+    .card-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .banner-section {
+        padding: 2rem 0 3rem;
+    }
+
+    .circle {
+        width: 60vw;
+        height: 60vw;
+        max-width: 220px;
+        max-height: 220px;
+        margin-top: 2.5rem;
+    }
+
+    .badge-new {
+        top: 16%;
+        right: 10%;
+        transform: translate(30%, -40%);
+        font-size: 0.65rem;
+        padding: 0.28rem 0.7rem;
+    }
+
+
+    .b-name {
+        margin-top: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+
+
+    .banner-btn {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .banner-btn button {
+        width: auto;
+        max-width: none;
+        justify-content: center;
+    }
+
+    .circle img {
+        width: 46.67px;
+        max-width: 120px;
+    }
+
+    .about {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .text-heading {
+        font-size: 2rem;
+    }
+
+    .text-d {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-s {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+
+    .choose-header {
+        font-size: 2rem;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .fp-para {
+        font-size: 2rem;
+    }
+
+    .meet-main {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        /* margin-top: 0; */
+    }
+
+    .mmi {
+        min-height: 9.375rem;
+        min-width: 9.375rem;
+
+        padding: 0 6.313rem 1rem 6.313rem;
+        /* padding-left: 3rem; */
+    }
+
+    .alex {
+        margin: 0;
+    }
+
+    .v-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .v-description {
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .so-ic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-header {
+        font-size: 3rem;
+    }
+
+    .copyright {
+        min-width: 25rem;
+    }
+
+    .medias {
+        max-width: 15.94rem;
+    }
+
+
+
+
 }

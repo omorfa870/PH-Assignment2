@@ -356,7 +356,12 @@
     /* border: 2px solid red; */
     background-color: #250D44;
     overflow: hidden;
+    transition: transform 0.2s ease;
+}
 
+.card:hover{
+    transform: scale(1.03);
+    cursor: pointer;
 }
 
 .card iframe {
@@ -442,4 +447,65 @@
 
 .meet-main .so-ic img{
   padding: 0;
+}
+
+
+/* footer */
+
+.footer {
+    width: 100%;
+    min-height: 25.75vh;
+    background-image: url(../assets/footer-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-header{
+    color: #FFFFFF;
+    font-size: 3.75rem;
+    font-weight: bolder;
+    padding-bottom: 2rem;
+}
+
+.footer-container{
+    padding: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.medias{
+    /* padding-top: 2rem; */
+    display: flex;
+    width: 34rem;
+    /* border: 2px solid red; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.med{
+    display: flex;
+    gap: 5px;
+}
+
+.med p{
+    color: #FFFFFF;
+}
+
+.copyright{
+    padding-top: 2rem;
+    color: #FFFFFF;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ic h1 i{
+    font-size: 2rem;
+    
 }
